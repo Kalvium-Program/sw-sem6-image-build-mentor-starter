@@ -12,4 +12,4 @@ Use `node:22-bookworm-slim`, the tested base family. It includes Node and npm; t
 
 This preview restricts requests to /health and reuses the reference handler.
 
-No Dockerfile build-argument secrets, credentials, database setup or CI required. Do not change application code or remove the lockfile. Detailed cache/non-root improvements are next LU.
+No Dockerfile build-argument secrets, credentials, database setup or CI required. Do not change application code or remove the lockfile. Faster rebuilds and a non-root user come in the next session.

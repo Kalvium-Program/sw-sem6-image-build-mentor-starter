@@ -1,4 +1,4 @@
-# LU 2.6: Mentor demonstration
+# Build an Image: Mentor Demonstration
 
 A deliberately broken mentor image recipe. Repair the incorrect COPY source live.
 
@@ -7,8 +7,8 @@ Read `docs/image-contract.md`, `package.json`, the lockfile and relevant source 
 ## Reproduce
 
 ```bash
-docker build -t campus-preview:lu26-demo .
-docker run -d --name lu26-demo -p 127.0.0.1:8082:3000 campus-preview:lu26-demo
+docker build -t campus-preview:demo .
+docker run -d --name campus-demo -p 127.0.0.1:8082:3000 campus-preview:demo
 curl --noproxy '*' -i http://127.0.0.1:8082/health
 ```
 
@@ -19,8 +19,8 @@ Read state and logs before changing code. Keep host port and request URL consist
 ## Cleanup
 
 ```bash
-docker stop lu26-demo
-docker rm lu26-demo
+docker stop campus-demo
+docker rm campus-demo
 ```
 
 Use dummy data only. `.dockerignore` excludes local environment values and installed host dependencies from the build context. Do not use real secrets during this practice.
